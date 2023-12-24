@@ -37,6 +37,20 @@
     <kbd>H</kbd>
     <kbd>J</kbd>
 </div>
+<script>
+    const keys = ['A', 'S', 'D', 'F', 'G', 'H', 'J'];
+
+    document.addEventListener('keydown', function(event) {
+        const pressedKey = event.key.toUpperCase();
+
+        if (keys.includes(pressedKey)) {
+            console.log(`Pressed key: '${pressedKey}'`);
+            // You can add additional functionality here for each specific key.
+        } else {
+            console.warn(`Warning: '${pressedKey}' is not a valid key.`);
+        }
+    });
+</script>
 </body>
 </body>
 </html>
