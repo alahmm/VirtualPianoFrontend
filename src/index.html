@@ -27,30 +27,46 @@
     </style>
 </head>
 <body>
-<body>
+<!--<div class="container">-->
+<!--    <kbd id="keyA">A</kbd>-->
+<!--    <kbd id="keyS">S</kbd>-->
+<!--    <kbd id="keyD">D</kbd>-->
+<!--    <kbd id="keyF">F</kbd>-->
+<!--    <kbd id="keyG">G</kbd>-->
+<!--    <kbd id="keyH">H</kbd>-->
+<!--    <kbd id="keyJ">J</kbd>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    const keys = ['A', 'S', 'D', 'F', 'G', 'H', 'J'];-->
+
+<!--    document.addEventListener('keydown', function(event) {-->
+<!--        const pressedKey = event.key.toUpperCase();-->
+
+<!--        if (keys.includes(pressedKey)) {-->
+<!--            const audioPath = `${pressedKey}.mp3`;-->
+<!--            const audio = new Audio(audioPath);-->
+<!--            audio.play();-->
+<!--        } else {-->
+<!--            console.warn(`Warning: '${pressedKey}' is not a valid key.`);-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
 <div class="container">
-    <kbd>A</kbd>
-    <kbd>S</kbd>
-    <kbd>D</kbd>
-    <kbd>F</kbd>
-    <kbd>G</kbd>
-    <kbd>H</kbd>
-    <kbd>J</kbd>
+    <kbd id="keyA" onclick="playAudio('A.mp3')">A</kbd>
+    <kbd id="keyS" onclick="playAudio('S.mp3')">S</kbd>
+    <kbd id="keyD" onclick="playAudio('D.mp3')">D</kbd>
+    <kbd id="keyF" onclick="playAudio('F.mp3')">F</kbd>
+    <kbd id="keyG" onclick="playAudio('G.mp3')">G</kbd>
+    <kbd id="keyH" onclick="playAudio('H.mp3')">H</kbd>
+    <kbd id="keyJ" onclick="playAudio('J.mp3')">J</kbd>
 </div>
+
 <script>
-    const keys = ['A', 'S', 'D', 'F', 'G', 'H', 'J'];
-
-    document.addEventListener('keydown', function(event) {
-        const pressedKey = event.key.toUpperCase();
-
-        if (keys.includes(pressedKey)) {
-            console.log(`Pressed key: '${pressedKey}'`);
-            // You can add additional functionality here for each specific key.
-        } else {
-            console.warn(`Warning: '${pressedKey}' is not a valid key.`);
-        }
-    });
+    function playAudio(audioPath) {
+        const audio = new Audio(audioPath);
+        audio.play();
+    }
 </script>
-</body>
 </body>
 </html>
