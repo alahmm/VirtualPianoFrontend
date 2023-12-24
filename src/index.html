@@ -5,7 +5,7 @@
     <title>Virtual Piano</title>
     <style>
         body {
-            background-color: #f0f0f0; /* Set the page background color */
+            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,12 +17,27 @@
             display: flex;
         }
 
-        kbd {
-            background-color: white; /* Set the key background color to white */
-            padding: 20px; /* Set the size of the keys */
-            margin-left: -5px; /* Remove the distance between the keys */
-            border: 1px solid #ccc; /* Set boundaries for <kbd> elements */
+        .white-keys kbd {
+            background-color: white;
+            padding: 20px;
+            margin-left: -5px;
+            border: 1px solid #ccc;
             border-radius: 5px;
+            cursor: pointer;
+            width: 40px; /* Add a specific width to the white keys */
+            height: 120px; /* Add a specific height to the white keys */
+        }
+
+        .black-keys kbd {
+            background-color: black;
+            color: white;
+            padding: 15px;
+            margin-left: -10px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
         }
     </style>
 </head>
@@ -53,13 +68,22 @@
 <!--    });-->
 <!--</script>-->
 <div class="container">
-    <kbd id="keyA" onclick="playAudio('A.mp3')">A</kbd>
-    <kbd id="keyS" onclick="playAudio('S.mp3')">S</kbd>
-    <kbd id="keyD" onclick="playAudio('D.mp3')">D</kbd>
-    <kbd id="keyF" onclick="playAudio('F.mp3')">F</kbd>
-    <kbd id="keyG" onclick="playAudio('G.mp3')">G</kbd>
-    <kbd id="keyH" onclick="playAudio('H.mp3')">H</kbd>
-    <kbd id="keyJ" onclick="playAudio('J.mp3')">J</kbd>
+    <div class="white-keys">
+        <kbd id="keyA" onclick="playAudio('A.mp3')">A</kbd>
+        <kbd id="keyS" onclick="playAudio('S.mp3')">S</kbd>
+        <kbd id="keyD" onclick="playAudio('D.mp3')">D</kbd>
+        <kbd id="keyF" onclick="playAudio('F.mp3')">F</kbd>
+        <kbd id="keyG" onclick="playAudio('G.mp3')">G</kbd>
+        <kbd id="keyH" onclick="playAudio('H.mp3')">H</kbd>
+        <kbd id="keyJ" onclick="playAudio('J.mp3')">J</kbd>
+    </div>
+    <div class="black-keys">
+        <kbd id="keyW" onclick="playAudio('W.mp3')">W</kbd>
+        <kbd id="keyE" onclick="playAudio('E.mp3')">E</kbd>
+        <kbd id="keyT" onclick="playAudio('T.mp3')">T</kbd>
+        <kbd id="keyY" onclick="playAudio('Y.mp3')">Y</kbd>
+        <kbd id="keyU" onclick="playAudio('U.mp3')">U</kbd>
+    </div>
 </div>
 
 <script>
